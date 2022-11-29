@@ -66,18 +66,18 @@ class EventsController extends Controller
     public function listView()
     {
         $events = Events::all();
-        return view('event.list', ['events' => $events]);
+        return view('events.list', ['events' => $events]);
     }
 
     public function editView($id)
     {
         $events = Events::find($id);
-        return view('copy.edit', ['event' => $events]);
+        return view('events.edit', ['events' => $events]);
     }
 
     public function newView()
     {
         $events = Events::all();
-        return view('event.new', ['event' => $events]);
+        return view('events.new', ['events' => $events]);
     }
 }

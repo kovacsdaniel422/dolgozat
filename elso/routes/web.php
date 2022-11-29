@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/api/events', [EventsController::class,'index']); 
+Route::get('/api/events/{id}', [EventsController::class,'show']);
 Route::post('/api/events', [EventsController::class,'store']); 
 Route::put('/api/events/{id}', [EventsController::class,'update']); 
 Route::delete('/api/events/{id}', [EventsController::class,'destroy']); 
+
+/* view */
+Route::get('events/list', [EventsController::class,'listView']); 

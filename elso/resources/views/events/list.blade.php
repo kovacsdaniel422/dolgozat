@@ -1,13 +1,15 @@
-<form action="/api/events/{{$events->event_id}}" method="post">
+@foreach ($events as $event)
+    <form action="/api/events/{{$event->event_id}}" method="post">
 
     {{csrf_field()}}
 
     {{method_field('GET')}}
 
-    <div class="form-group">
+        <div class="form-group">
 
-        <input type="submit" value="{{$events->event_id}}">
+            <input type="submit" value="{{$event->event_id}}">
 
-    </div>
+        </div>
 
 </form>
+@endforeach

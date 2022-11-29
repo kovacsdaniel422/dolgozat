@@ -1,0 +1,27 @@
+felhasználó rákattint a kiválasztott termékre - ezzel generál egy új eseményt
+publikus felület -->View generálja az eseményt
+-->Controller feliratkozik az eseménykezelőre
+-->Controller meghívja a modell metódusát
+-->Modell pedig kosárba teszi a terméket
+
+//*****Megjeleníteni a kosár adatait
+publikus (könyvPublicView) felület --> View generálja az eseményt
+Controller feliratkozik az eseménykezelőre
+Modell:ami kezeli a kosarat kosarTomb-be teszi
+Kell egy kosár gomb az index.html-re, hogy megnézzük a kosár tartalmát
+
+Új
+KosarModell : kosár adatait kezeli
+    #kosarTomb
+    getKosarTomb
+
+//KosarController: kapcsolatot létrehozni a KosarModell és a KosarView között
+KosarView - megjeleníti a kosár tartalmát
+    kosarTomb tartalmát jeleníti meg az oldalon
+        pl: táblázatban, (törlöm a kosárból, +példámyszám változtatása)
+
+
+
+
+
+
